@@ -1,0 +1,181 @@
+{
+  "version": "0.0.0",
+  "name": "players",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        {
+          "name": "playerAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "bump",
+          "type": "u8"
+        },
+        {
+          "name": "nickname",
+          "type": "string"
+        },
+        {
+          "name": "avatar",
+          "type": "publicKey"
+        }
+      ]
+    },
+    {
+      "name": "updateNickname",
+      "accounts": [
+        {
+          "name": "playerAccount",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "nickname",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "updateAvatar",
+      "accounts": [
+        {
+          "name": "playerAccount",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "avatar",
+          "type": "publicKey"
+        }
+      ]
+    },
+    {
+      "name": "addGame",
+      "accounts": [
+        {
+          "name": "playerAccount",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "game",
+          "type": "publicKey"
+        }
+      ]
+    },
+    {
+      "name": "removeGame",
+      "accounts": [
+        {
+          "name": "playerAccount",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "game",
+          "type": "publicKey"
+        }
+      ]
+    },
+    {
+      "name": "addAchievement",
+      "accounts": [
+        {
+          "name": "playerAccount",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "achievementId",
+          "type": "u16"
+        },
+        {
+          "name": "expToAdd",
+          "type": "u32"
+        }
+      ]
+    },
+    {
+      "name": "addExp",
+      "accounts": [
+        {
+          "name": "playerAccount",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "exp",
+          "type": "u32"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "PlayerAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "nickname",
+            "type": "string"
+          },
+          {
+            "name": "avatar",
+            "type": "publicKey"
+          },
+          {
+            "name": "games",
+            "type": {
+              "vec": "publicKey"
+            }
+          },
+          {
+            "name": "level",
+            "type": "u8"
+          },
+          {
+            "name": "exp",
+            "type": "u32"
+          },
+          {
+            "name": "achievements",
+            "type": {
+              "vec": "u16"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+     "address":"9acXdXcHNvgNiy5J62B5mt2gyZuMQ1fBYaqtdnHcjGkj"
+  }
+}

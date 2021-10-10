@@ -1,0 +1,23 @@
+{
+  "name": "asylum-sdk",
+  "version": "0.0.1",
+  "description": "SDK for the Asylum programs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LastSymbol0/asylum-sdk.git"
+  },
+  "author": "corwin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LastSymbol0/asylum-sdk/issues"
+  },
+  "homepage": "https://github.com/LastSymbol0/asylum-sdk#readme",
+  "dependencies": {
+    "@project-serum/anchor": "^0.17.1-beta.1",
+    "@solana/web3.js": "^1.29.2"
+  }
+}
