@@ -1,6 +1,6 @@
 {
   "name": "asylum-sdk",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "SDK for the Asylum programs",
   "main": "dist/index.js",
   "scripts": {
