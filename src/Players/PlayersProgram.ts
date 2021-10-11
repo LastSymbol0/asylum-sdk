@@ -36,11 +36,11 @@ export class PlayersProgram implements PlayersProgram
     async fetchPlayerGlobalAccountData(userPublicKey: PublicKey): Promise<players.PlayerGlobalData> {
         try {
             const [playerAccountAddress, _] = await this.findPlayerGlobalAccountAddress(userPublicKey)
-            const account = await this.program.account.achievementsAccount.fetch(playerAccountAddress)
+            const account = await this.program.account.playerAccount.fetch(playerAccountAddress)
 
             return account as players.PlayerGlobalData;
         } catch (err) {
-            console.log("Achievements data fetching error: ", err)
+            console.log("Player data fetching error: ", err)
             throw err
         }
     }
