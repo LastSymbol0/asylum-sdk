@@ -2,8 +2,9 @@
   "name": "asylum-sdk",
   "version": "0.0.2",
   "description": "SDK for the Asylum programs",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "rm -r ./dist/* && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,7 @@
     "@solana/web3.js": "^1.29.2"
   },
   "devDependencies": {
+    "ts-loader": "^9.2.6",
     "typescript": "^4.4.3"
   }
 }
